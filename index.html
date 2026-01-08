@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baptiste Noufel - Développeur en alternance</title>
+
+  <!-- Feuille de style principale -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Polices Google (titre futuriste + texte) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Fond animé -->
+  <canvas id="bg-canvas"></canvas>
+
+  <div class="page-wrapper">
+    <!-- Barre de navigation supérieure -->
+    <header class="header">
+      <div class="logo">BN<span>_</span></div>
+      <nav class="nav">
+        <a href="#hero">Accueil</a>
+        <a href="#about">Profil</a>
+        <a href="#skills">Compétences</a>
+        <a href="#projects">Projets</a>
+        <a href="#education">Formation</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Section d'intro / héro principale -->
+      <section id="hero" class="section hero">
+        <div class="hero-left">
+          <p class="hero-tag">Disponible pour une alternance • Bac+3</p>
+          <h1>
+            <span class="glitch" data-text="Baptiste Noufel">Baptiste Noufel</span>
+          </h1>
+          <h2>Développeur de solutions numériques <span class="accent">sécurisées</span></h2>
+          <p class="hero-sub">
+            Étudiant en Bachelor Informatique à l’ESIEE-IT (CCI-IDF Pontoise),
+            à la recherche d’une alternance sur 2 ans en développement et cybersécurité.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn primary">Me contacter</a>
+            <a href="#projects" class="btn secondary">Voir mes projets</a>
+          </div>
+          <div class="hero-info">
+            <span>📍 Vauréal (95490)</span>
+            <span>🎂 Né le 08/08/2006</span>
+            <span>🚀 Rythme 1 semaine école / 1 semaine entreprise</span>
+          </div>
+        </div>
+
+        <!-- Carte 3D + stats rapides -->
+        <div class="hero-right">
+          <div class="card-3d">
+            <div class="card-3d-inner">
+              <div class="card-3d-front">
+                <p class="status-dot"></p>
+                <p class="card-title">Dev Alternance</p>
+                <p class="card-name">Baptiste Noufel</p>
+                <p class="card-line">Java • Python • PHP • JS • SQL</p>
+              </div>
+              <div class="card-3d-back">
+                <p>Focus</p>
+                <ul>
+                  <li>Dév. web & full-stack</li>
+                  <li>Cybersécurité (en cours)</li>
+                  <li>Emulation & bas niveau</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-metrics">
+            <div class="metric">
+              <span class="metric-value">+2</span>
+              <span class="metric-label">ans de projets</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">Chip‑8</span>
+              <span class="metric-label">émulateur Python</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">BADFLIX</span>
+              <span class="metric-label">plateforme web</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Présentation rapide du profil -->
+      <section id="about" class="section">
+        <h2 class="section-title">Profil</h2>
+        <div class="grid two">
+          <div>
+            <p>
+              Étudiant en <strong>Bachelor Informatique</strong> à l’ESIEE-IT, orienté développement de solutions numériques sécurisées, avec une vraie appétence pour le code propre et les projets concrets.
+            </p>
+            <p>
+              Rigoureux, autonome et réactif, habitué à travailler en équipe grâce aux scouts et à mes projets académiques.
+            </p>
+          </div>
+          <div class="chips">
+            <span class="chip">Rigoureux</span>
+            <span class="chip">Autonome</span>
+            <span class="chip">Dynamique</span>
+            <span class="chip">Investi</span>
+            <span class="chip">Réactif</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Compétences techniques -->
+      <section id="skills" class="section">
+        <h2 class="section-title">Compétences</h2>
+        <div class="skills-grid">
+          <div class="skills-column">
+            <h3>Langages & Web</h3>
+            <div class="skill-bar" data-skill="Java">Java</div>
+            <div class="skill-bar" data-skill="Python">Python</div>
+            <div class="skill-bar" data-skill="PHP">PHP</div>
+            <div class="skill-bar" data-skill="JavaScript">JavaScript</div>
+            <div class="skill-bar" data-skill="HTML/CSS">HTML / CSS</div>
+          </div>
+          <div class="skills-column">
+            <h3>Base de données & outils</h3>
+            <div class="skill-bar" data-skill="SQL">SQL</div>
+            <div class="skill-bar" data-skill="RDB">Bases relationnelles</div>
+            <div class="skill-bar" data-skill="Office">Outils bureautiques</div>
+            <div class="skill-bar" data-skill="Hardware">Montage PC fixe</div>
+          </div>
+          <div class="skills-column">
+            <h3>En cours d’acquisition</h3>
+            <div class="skill-pill">C</div>
+            <div class="skill-pill">Linux</div>
+            <div class="skill-pill">Cybersécurité</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projets principaux -->
+      <section id="projects" class="section">
+        <h2 class="section-title">Projets informatiques</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-header">
+              <h3>Émulateur CHIP‑8</h3>
+              <span class="project-year">2025</span>
+            </div>
+            <p>
+              Développement d’un émulateur CHIP‑8 en Python permettant de charger et exécuter des ROM dans une fenêtre graphique interactive.
+            </p>
+            <ul>
+              <li>Gestion d’instructions bas niveau et timers.</li>
+              <li>Affichage graphique et boucle de jeu.</li>
+              <li>Renforcement de la compréhension des systèmes.</li>
+            </ul>
+            <span class="project-tags">Python • Emulation • Graphique</span>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <h3>Site web "BADFLIX"</h3>
+              <span class="project-year">2024</span>
+            </div>
+            <p>
+              Conception d’une plateforme web type streaming utilisant PHP, SQL, HTML, CSS et JavaScript.
+            </p>
+            <ul>
+              <li>Architecture full‑stack (front + back).</li>
+              <li>Gestion de base de données et contenu dynamique.</li>
+              <li>Responsive design pour mobile et desktop.</li>
+            </ul>
+            <span class="project-tags">PHP • SQL • Front‑end • Responsive</span>
+          </article>
+        </div>
+      </section>
+
+      <!-- Formation / diplômes -->
+      <section id="education" class="section">
+        <h2 class="section-title">Diplômes & formation</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>Bachelor Informatique</h3>
+              <p class="timeline-sub">
+                ESIEE-IT CCI-IDF, Pontoise • 2024 - 2027
+              </p>
+              <ul>
+                <li>Développeur de solutions numériques sécurisées.</li>
+                <li>Alternance 2ᵉ & 3ᵉ année, 1 semaine école / 1 semaine entreprise.</li>
+                <li>Programmation, systèmes, gestion de projet, sécurité.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>Bac Général</h3>
+              <p class="timeline-sub">
+                Notre Dame de la Compassion, Pontoise • 2024 • Mention assez bien
+              </p>
+              <ul>
+                <li>Spécialités Mathématiques & N.S.I.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>Brevet des collèges</h3>
+              <p class="timeline-sub">
+                Collège Les Touleuses, Cergy • 2021
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Langues et centres d'intérêt -->
+      <section class="section">
+        <h2 class="section-title">Langues & centres d’intérêt</h2>
+        <div class="grid two">
+          <div>
+            <h3>Langues</h3>
+            <ul class="list-clean">
+              <li>Anglais : lu, écrit, parlé.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Centres d’intérêt</h3>
+            <ul class="list-clean">
+              <li>Scouts et Guides de France : encadrement d’enfants.</li>
+              <li>Musique : pratique de la trompette.</li>
+              <li>Cinéma.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Coordonnées + formulaire Formspree -->
+      <section id="contact" class="section">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <p>Disponible pour une alternance en développement / cybersécurité.</p>
+            <ul class="list-clean">
+              <li>📞 07 68 94 91 69</li>
+              <li>✉️ <a href="mailto:baptiste.noufelpro@gmail.com">baptiste.noufelpro@gmail.com</a></li>
+              <li>📍 Vauréal (95490) • Cergy-Pontoise</li>
+            </ul>
+          </div>
+
+          <!-- Formulaire relié à Formspree -->
+          <form class="contact-form" id="contactForm" action="https://formspree.io/f/mvzgedwj" method="POST">
+            <div class="field">
+              <label for="name">Nom</label>
+              <input type="text" id="name" name="name" placeholder="Votre nom" required />
+            </div>
+            <div class="field">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="_replyto" placeholder="votre@email.fr" required />
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Votre message" required></textarea>
+            </div>
+
+            <!-- Champ caché pour le sujet du mail -->
+            <input type="hidden" name="_subject" value="Message depuis le site CV" />
+
+            <button type="submit" class="btn primary full">Envoyer</button>
+            <p class="form-note" id="formStatus"> </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Bas de page -->
+    <footer class="footer">
+      <span>© <span id="year"></span> • Baptiste Noufel</span>
+    </footer>
+
+    <!-- Notification -->
+    <div id="toast" class="toast">Message envoyé ✅</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
