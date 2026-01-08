@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>À propos de moi - Baptiste Noufel</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- même fond animé que sur la page principale -->
+  <canvas id="bg-canvas"></canvas>
+
+  <div class="page-wrapper">
+    <!-- Header réutilisé, avec lien retour -->
+    <header class="header">
+      <div class="logo">BAPTISTE NOUFEL<span>_</span></div>
+      <nav class="nav">
+        <a href="index.html#hero">Accueil</a>
+        <a href="index.html#projects">Projets</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="about.html">À propos de moi</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Bloc principal "À propos" -->
+        <section class="section">
+        <h2 class="section-title">À propos de moi</h2>
+        <div class="grid two">
+            <div>
+            <p>
+                Passionné d’informatique depuis mon plus jeune âge, j’ai toujours aimé comprendre comment fonctionnent les systèmes, du logiciel au matériel. La programmation, l’administration et la résolution de problèmes techniques sont devenues au fil du temps un véritable fil conducteur dans mon parcours scolaire et personnel.
+            </p>
+            <p>
+                Aujourd’hui, mon objectif est de construire une expérience solide dans les métiers du numérique : développement, gestion de systèmes, support utilisateur et, à terme, des missions plus orientées sécurité. Mon Bachelor Informatique à l’ESIEE‑IT me donne un cadre théorique exigeant que je complète avec des projets concrets et une forte envie d’apprendre en entreprise.
+            </p>
+            </div>
+            <div>
+            <h3>Ce que je recherche</h3>
+            <ul class="list-clean">
+                <li>Une alternance d'un an dans le domaine de l’informatique.</li>
+                <li>Des missions variées : développement, exploitation, support, outillage interne.</li>
+                <li>Une équipe prête à m’accompagner tout en me laissant gagner en autonomie.</li>
+            </ul>
+            </div>
+        </div>
+        </section>
+
+
+      <!-- Bloc motivations -->
+      <section class="section">
+        <h2 class="section-title">Motivations</h2>
+        <div class="grid two">
+            <div>
+            <h3>Ce qui me motive</h3>
+            <p>
+                Ce qui me motive avant tout, c’est de résoudre des problèmes concrets et d’apporter un vrai service aux utilisateurs. Que ce soit en développant une application, en maintenant un système en conditions opérationnelles ou en aidant quelqu’un à débloquer une situation, j’aime voir un résultat tangible à mon travail.
+            </p>
+            <p>
+                J’apprécie les environnements où l’on peut toucher à plusieurs aspects de l’informatique : écrire du code, manipuler des bases de données, comprendre l’infrastructure, analyser un bug, améliorer un process. Chaque nouvelle tâche est pour moi l’occasion d’élargir mon champ de compétences.
+            </p>
+            </div>
+            <div>
+            <h3>Objectifs à moyen terme</h3>
+            <ul class="list-clean">
+                <li>Valider mon Bachelor puis poursuivre vers un niveau Bac+5 en informatique.</li>
+                <li>Devenir progressivement autonome sur un périmètre applicatif ou système.</li>
+                <li>Développer de bonnes pratiques : qualité du code, documentation, support fiable.</li>
+                <li>Construire un profil polyvalent capable de s’adapter à différents contextes (dev, support, projets techniques).</li>
+            </ul>
+            </div>
+        </div>
+        </section>
+
+
+      <!-- Bloc un peu plus perso -->
+        <section class="section">
+            <h2 class="section-title">Un peu plus perso</h2>
+            <div class="grid two">
+                <div>
+                <h3>Ce qui m’inspire</h3>
+                <p>
+                    J’aime analyser les outils que j’utilise au quotidien, comprendre leur logique et imaginer comment ils pourraient être améliorés. Cette curiosité me pousse à expérimenter, à lire de la documentation et à tester différentes approches avant de retenir la plus pertinente.
+                </p>
+                <p>
+                    Dans un projet, je préfère comprendre le “pourquoi” autant que le “comment”. Cette manière de travailler m’aide à être plus à l’aise sur des sujets variés et à progresser de façon continue, sans me limiter à un seul type de poste ou de technologie.
+                </p>
+                </div>
+                <div>
+                <h3>En dehors du clavier</h3>
+                <ul class="list-clean">
+                    <li>Scouts et Guides de France : encadrement d’enfants, sens des responsabilités et esprit d’équipe.</li>
+                    <li>Musique (trompette) : rigueur, écoute et régularité dans la pratique.</li>
+                    <li>Cinéma et jeux vidéo : univers qui nourrissent ma culture numérique et ma créativité.</li>
+                </ul>
+                <p>
+                    Ces activités m’aident à garder un bon équilibre, à développer le relationnel et à apporter un regard humain et collectif dans les projets informatiques.
+                </p>
+                </div>
+            </div>
+            </section>
+
+
+    </main>
+
+    <!-- Bas de page -->
+    <footer class="footer">
+      <span>© <span id="year"></span> • Baptiste Noufel</span>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
