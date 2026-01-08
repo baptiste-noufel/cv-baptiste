@@ -477,6 +477,8 @@ body {
   border: 1px solid var(--border);
   overflow: hidden;
   font-size: 0.85rem;
+  background: rgba(15, 23, 42, 0.9);
+  transition: border-color 0.2s ease-out, transform 0.15s ease-out, box-shadow 0.2s ease-out, background 0.2s ease-out;
 }
 
 .skill-bar::before {
@@ -485,9 +487,23 @@ body {
   inset: 0;
   width: var(--level, 70%);
   background: linear-gradient(90deg, var(--accent-soft), transparent);
-  opacity: 0.7;
+  opacity: 0.0;
   z-index: -1;
+  transition: opacity 0.2s ease-out;
 }
+
+/* Effet au survol des compétences principales */
+.skill-bar:hover {
+  border-color: var(--accent-strong);
+  background: radial-gradient(circle at left, rgba(34, 211, 238, 0.25), rgba(15, 23, 42, 0.95));
+  transform: translateY(-1px);
+  box-shadow: 0 0 18px rgba(34, 211, 238, 0.3);
+}
+
+.skill-bar:hover::before {
+  opacity: 0.9;
+}
+
 
 /* Compétences en cours d'acquisition */
 .skill-pill {
@@ -497,7 +513,19 @@ body {
   font-size: 0.8rem;
   border: 1px dashed var(--accent-soft);
   margin: 0 0.3rem 0.3rem 0;
+  background: rgba(15, 23, 42, 0.9);
+  transition: border-color 0.2s ease-out, background 0.2s ease-out, transform 0.15s ease-out, box-shadow 0.2s ease-out;
 }
+
+/* Effet au survol des compétences en cours d'acquisition */
+.skill-pill:hover {
+  border-style: solid;
+  border-color: var(--accent-strong);
+  background: radial-gradient(circle at center, rgba(34, 211, 238, 0.25), rgba(15, 23, 42, 0.95));
+  transform: translateY(-1px);
+  box-shadow: 0 0 14px rgba(34, 211, 238, 0.3);
+}
+
 
 /* Cartes projet */
 .projects-grid {
@@ -762,4 +790,8 @@ body {
   .hero-actions {
     flex-direction: column;
   }
+}
+
+.nav a[href="about.html"] {
+  color: var(--accent-strong);
 }
