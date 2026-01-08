@@ -625,10 +625,27 @@ body {
   box-shadow: 0 0 8px rgba(34, 211, 238, 0.9);
 }
 
-.timeline-sub {
-  font-size: 0.85rem;
-  color: var(--muted);
-  margin-bottom: 0.4rem;
+.timeline-sub a {
+  text-decoration: none;              /* enlève le soulignement par défaut */
+  color: var(--accent-strong);        /* même couleur que le reste du thème */
+  font-weight: 500;
+  position: relative;
+}
+
+/* petit effet de soulignement maîtrisé au survol */
+.timeline-sub a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 1px;
+  background: linear-gradient(to right, var(--accent), var(--danger));
+  transition: width 0.25s ease-out;
+}
+
+.timeline-sub a:hover::after {
+  width: 100%;
 }
 
 .timeline ul {
