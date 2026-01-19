@@ -81,11 +81,15 @@ body {
   display: flex;
   align-items: center;
   gap: 0.25rem;
+  padding-left: 2rem;
 }
 
 .logo span {
   color: var(--danger);
   animation: cursorBlink 1s infinite;
+}
+#about {
+  padding-right: 2rem; /* espace entre le texte et le bord droit */
 }
 
 @keyframes cursorBlink {
@@ -301,6 +305,11 @@ body {
   transform: translateY(-1px);
   box-shadow: 0 0 30px rgba(34, 211, 238, 0.4);
 }
+
+.btn i {
+  font-size: 1.5rem;
+}
+
 
 /* Infos sous les boutons */
 .hero-info {
@@ -530,8 +539,15 @@ body {
 /* Cartes projet */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.4rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* max 2 colonnes */
+}
+
+/*1 colonne sur mobile */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .project-card {
@@ -724,6 +740,88 @@ body {
   color: var(--muted);
   margin-top: 0.4rem;
 }
+
+/* Boutons CTA */
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: rgba(15, 23, 42, 0.9);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn span {
+  position: relative;
+  z-index: 1;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(34, 211, 238, 0.2), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn:hover::before {
+  opacity: 1;
+}
+
+.btn-primary {
+  color: var(--accent-strong);
+  border-color: var(--accent-strong);
+}
+
+.btn-primary:hover {
+  background: rgba(34, 211, 238, 0.15);
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.3);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.btn-secondary:hover {
+  background: rgba(34, 211, 238, 0.1);
+  box-shadow: 0 0 15px rgba(34, 211, 238, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+
+
 
 /* Footer */
 .footer {
