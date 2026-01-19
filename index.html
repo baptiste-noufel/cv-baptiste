@@ -3,15 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Baptiste Noufel - Développeur en alternance</title>
+  <title>Baptiste Noufel</title>
 
   <!-- Feuille de style principale -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Polices Google (titre futuriste + texte) -->
+  <!-- Polices Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
 </head>
 <body>
   <!-- Fond animé -->
@@ -28,7 +30,10 @@
         <a href="#projects">Projets</a>
         <a href="#education">Formation</a>
         <a href="#contact">Contact</a>
-        <a href="about.html">À propos de moi</a>
+        <section id="about">
+          <a href="about.html">À propos de moi</a>
+        </section>
+        
       </nav>
     </header>
 
@@ -36,14 +41,17 @@
       <!-- Section d'intro / héro principale -->
       <section id="hero" class="section hero">
         <div class="hero-left">
-          <p class="hero-tag">Disponible pour une alternance • Bac+3</p>
+          <p class="hero-tag">Disponible pour une alternance et/ou un stage • Bac+3</p>
           <h1>
             <span class="glitch" data-text="Alternance">Alternance</span>
           </h1>
+          <h2>
+            <span class="glitch" data-text="Stage">Stage</span>
+          </h2>
           <h2>Développeur de solutions numériques <span class="accent">sécurisées</span></h2>
           <p class="hero-sub">
             Étudiant en Bachelor Informatique à l’ESIEE-IT (CCI-IDF Pontoise),
-            à la recherche d’une alternance sur 2 ans en développement et cybersécurité.
+            à la recherche d’une alternance sur 1 an en développement, support informatique, technicien informatique ou en cybersécurité.
           </p>
           <div class="hero-actions">
             <a href="#contact" class="btn primary">Me contacter</a>
@@ -133,6 +141,8 @@
             <h3>Base de données & outils</h3>
             <div class="skill-bar" data-skill="SQL">SQL</div>
             <div class="skill-bar" data-skill="RDB">Bases relationnelles</div>
+            <div class="skill-bar" data-skill="Réseaux">Réseaux</div>
+            <div class="skill-bar" data-skill="Cisco Packet Tracer">Cisco Packet Tracer</div>
             <div class="skill-bar" data-skill="Office">Outils bureautiques</div>
             <div class="skill-bar" data-skill="Hardware">Montage PC fixe</div>
           </div>
@@ -182,6 +192,45 @@
             </ul>
             <span class="project-tags">PHP • SQL • Front‑end • Responsive</span>
           </article>
+
+
+          <article class="project-card">
+            <div class="project-header">
+              <h3>Réseau virtuel avec Cisco Packet Tracer</h3>
+              <span class="project-year">2025</span>
+            </div>
+            <p>
+              Conception et simulation d'une infrastructure réseau complète dans Cisco Packet Tracer : routeurs, commutateurs, VLAN, DNS, serveurs, postes clients et gestion du flux de données.
+            </p>
+            <ul>
+              <li>Configuration de routeurs et commutateurs (adressage IP, routage statique et dynamique).</li>
+              <li>Segmentation en VLAN et gestion des flux inter-VLAN.</li>
+              <li>Mise en place de services réseau : DHCP, DNS, serveur web.</li>
+              <li>Test de connectivité et dépannage de problèmes de communication.</li>
+              <li>Compréhension concrète des couches OSI et du fonctionnement d'une infrastructure réseau.</li>
+            </ul>
+            <span class="project-tags">Cisco • Réseau • Infrastructure • Virtualisation</span>
+          </article>
+
+
+
+          <article class="project-card">
+            <div class="project-header">
+              <h3>Labyrinth's Creed – Jeu de labyrinthe en Python</h3>
+              <span class="project-year">2024</span>
+            </div>
+            <p>
+              Projet réalisé dans le cadre d’un concours avec ESIEE‑IT et l’entreprise UBI‑WAN : développement d’un niveau de jeu comprenant la génération automatique de labyrinthes et le déplacement du joueur.
+            </p>
+            <ul>
+              <li>Génération procédurale de labyrinthes aléatoires avec entrée et sortie.</li>
+              <li>Gestion des déplacements et des collisions dans une grille (haut, bas, gauche, droite).</li>
+              <li>Implémentation d’une aide pour trouver plus facilement le chemin vers la sortie.</li>
+              <li>Travail en équipe avec livrables, documentation et soutenance orale du projet.</li>
+            </ul>
+            <span class="project-tags">Python • Algorithmie • Jeu vidéo</span>
+          </article>
+    
         </div>
       </section>
 
@@ -260,7 +309,7 @@
         <h2 class="section-title">Contact</h2>
         <div class="contact-grid">
           <div class="contact-info">
-            <p>Disponible pour une alternance en développement / cybersécurité / support informatique / technicien informatique.</p>
+            <p>Disponible pour une alternance et/ou un stage en développement / cybersécurité / support informatique / technicien informatique.</p>
             <ul class="list-clean">
               <li>📞 07 68 94 91 69</li>
               <li>✉️ <a href="mailto:baptiste.noufelpro@gmail.com">baptiste.noufelpro@gmail.com</a></li>
@@ -276,7 +325,7 @@
             </div>
             <div class="field">
               <label for="email">E-mail</label>
-              <input type="email" id="email" name="_replyto" placeholder="votre@email.fr" required />
+              <input type="email" id="email" name="_replyto" placeholder="votre@email" required />
             </div>
             <div class="field">
               <label for="message">Message</label>
@@ -291,8 +340,22 @@
           </form>
         </div>
       </section>
-    </main>
 
+            <!-- Section liens et ressources -->
+      <section class="section">
+        <h2 class="section-title">Liens et ressources</h2>
+        <div class="cta-buttons">
+          <a href="https://www.linkedin.com/in/baptiste-noufel-149785349/" target="_blank" class="btn btn-primary">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="CV NOUFEL Baptiste.pdf" download class="btn btn-secondary">
+            <span>Télécharger mon CV</span>
+          </a>
+        </div>
+      </section>
+
+    </main>
+    
     <!-- Bas de page -->
     <footer class="footer">
       <span>© <span id="year"></span> • Baptiste Noufel</span>
