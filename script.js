@@ -95,6 +95,18 @@ const observer = new IntersectionObserver(
 
 skillBars.forEach(bar => observer.observe(bar));
 
+
+const navToggle = document.querySelector('.nav-toggle');
+const nav = document.querySelector('.nav');
+
+if (navToggle && nav) {
+  navToggle.addEventListener('click', () => {
+    nav.classList.toggle('open');
+  });
+}
+
+
+
 // Gestion de l'envoi du formulaire avec Formspree (AJAX)
 const form = document.getElementById("contactForm");
 const status = document.getElementById("formStatus");
