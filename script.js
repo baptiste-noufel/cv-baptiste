@@ -68,14 +68,17 @@ drawParticles();
 // Animation progressive des barres de compétences
 const skillBars = document.querySelectorAll(".skill-bar");
 const levels = {
+  "C#": "80%",
   Java: "85%",
   Python: "80%",
   PHP: "75%",
   JavaScript: "80%",
   "HTML/CSS": "85%",
   SQL: "80%",
-  RDB: "75%",
-  Office: "80%",
+  Git: "85%",
+  API: "80%",
+  Réseaux: "75%",
+  "Cisco Packet Tracer": "80%",
   Hardware: "70%"
 };
 
